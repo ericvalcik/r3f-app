@@ -1,8 +1,9 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import Link from "next/link";
-import {ChevronLeft} from "lucide-react";
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+import { Tshirt } from '@/components/canvas/Tshirt'
 
 const Blob = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Blob), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
@@ -29,7 +30,8 @@ export default function Page() {
         <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'>
           <Link href={'/'} className='text-sm flex items-center gap-1 text-gray-700 hover:text-gray-500 pb-4 z-10'>
             <ChevronLeft size={16} />
-            Home</Link>
+            Home
+          </Link>
           <p className='w-full uppercase'>Next + React Three Fiber</p>
           <h1 className='my-4 text-5xl font-bold leading-tight'>Next 3D Starter</h1>
           <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
@@ -40,8 +42,12 @@ export default function Page() {
         <Blob />
         <Common />
       </View>
-      <View orbit zoom={false} className='absolute top-[100vh] flex h-screen w-full flex-col items-center justify-center'>
-        <Blob />
+      <View
+        orbit
+        zoom={false}
+        className='absolute top-[100vh] flex h-screen w-full flex-col items-center justify-center'
+      >
+        <Tshirt />
         <Common />
       </View>
     </>
