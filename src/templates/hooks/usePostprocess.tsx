@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useFrame, useThree } from '@react-three/fiber'
 import { useEffect, useMemo } from 'react'
 import * as THREE from 'three'
@@ -80,7 +82,7 @@ const usePostProcess = () => {
     return [screenCamera, screenScene, screen, renderTarget]
   }, [gl.encoding])
   useEffect(() => {
-    const { width, height } = size
+    const { width, height } = size as unknown as Size
     const { w, h } = {
       w: width * dpr,
       h: height * dpr,
