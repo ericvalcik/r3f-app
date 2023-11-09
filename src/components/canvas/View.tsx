@@ -20,9 +20,10 @@ export const Common: React.FC<CommonProps> = ({ color }) => (
 
 type ViewProps = React.HTMLAttributes<HTMLDivElement> & {
   orbit?: boolean
+  zoom?: boolean
 }
 
-const View: React.FC<ViewProps> = forwardRef(({ children, orbit, ...props }, ref) => {
+const View: React.FC<ViewProps> = forwardRef(({ children, orbit, zoom = true, ...props }, ref) => {
   const localRef = useRef(null)
   useImperativeHandle(ref, () => localRef.current)
 
@@ -32,7 +33,7 @@ const View: React.FC<ViewProps> = forwardRef(({ children, orbit, ...props }, ref
       <Three>
         <ViewImpl track={localRef}>
           {children}
-          {orbit && <OrbitControls />}
+          {orbit && <OrbitControls enableZoom={zoom} />}
         </ViewImpl>
       </Three>
     </>

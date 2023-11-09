@@ -16,6 +16,7 @@ specifiers:
   glsl-random: ^0.0.5
   glslify: ^7.1.1
   glslify-loader: ^2.0.0
+  lucide-react: ^0.292.0
   next: ^14.0.1
   postcss: ^8.4.27
   prettier: ^3.0.1
@@ -33,6 +34,7 @@ dependencies:
   '@react-three/drei': 9.88.12_qeyrnbglu2qhddznezlcffvnzu
   '@react-three/fiber': 8.15.10_lsjti2c5s2m3fkkss4hqvkg3zu
   glsl-random: 0.0.5
+  lucide-react: 0.292.0_react@18.2.0
   next: 14.0.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2355,6 +2357,14 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /lucide-react/0.292.0_react@18.2.0:
+    resolution: {integrity: sha512-rRgUkpEHWpa5VCT66YscInCQmQuPCB1RFRzkkxMxg4b+jaL0V12E3riWWR2Sh5OIiUhCwGW/ZExuEO4Az32E6Q==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /maath/0.9.0_afnrknwhrlbmsjfyb6zwyeomdm:
     resolution: {integrity: sha512-aAR8hoUqPxlsU8VOxkS9y37jhUzdUxM017NpCuxFU1Gk+nMaZASZxymZrV8LRSHzRk/watlbfyNKu6XPUhCFrQ==}
